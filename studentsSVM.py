@@ -20,6 +20,7 @@ ATTRIBUTES = [
     'Fedu',
     'traveltime',
     'studytime',
+    'failures',
     'schoolsup',
     'famsup',
     'activities',
@@ -28,8 +29,7 @@ ATTRIBUTES = [
     'health',
     'absences',
     'G1',
-    'G2',
-    'failures'
+    'G2'
 ]
 
 # Set independendent/dependent variables
