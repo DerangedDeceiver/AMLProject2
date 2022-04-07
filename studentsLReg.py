@@ -1,10 +1,11 @@
-# Linear regression of students data
+# Linear regression modelling of students data
 
 # Read in the data
 import pandas as pd
 data = pd.read_csv("StudentsAbridged.csv", sep=',')
 
 # Initialize variable factors
+# Portion of data used for testing
 TESTPART = 0.25
 
 # Constant list of attributes
