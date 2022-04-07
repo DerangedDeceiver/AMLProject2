@@ -2,7 +2,7 @@
 
 # Read in the data
 import pandas as pd
-data = pd.read_csv("StudentsAbridged.csv", sep=',')
+data = pd.read_csv("StudentsLessAbridged.csv", sep=',')
 
 # Initialize variable factors
 # Portion of data used for testing
@@ -22,7 +22,10 @@ ATTRIBUTES = [
     'romantic',
     'Walc',
     'health',
-    'absences'
+    'absences',
+    'G1',
+    'G2',
+    'failures'
 ]
 
 # Set independendent/dependent variables
