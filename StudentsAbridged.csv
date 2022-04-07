@@ -1,4 +1,4 @@
-age,"Pstatus(A/0,T/1)",Medu,Fedu,traveltime,studytime,schoolsup,famsup,activities,romantic,Walc,health,absences,G3
+age,Pstatus,Medu,Fedu,traveltime,studytime,schoolsup,famsup,activities,romantic,Walc,health,absences,G3
 17,1,4,3,1,2,0,0,0,1,4,1,22,4
 17,1,3,2,1,1,0,1,1,0,4,5,16,5
 17,1,1,2,1,1,0,0,1,0,3,1,14,5
