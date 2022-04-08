@@ -51,3 +51,12 @@ print("lr.intercept_: {}".format(lr.intercept_))
 ##########################################################################################
 print("Training set score: {:.2f}".format(lr.score(X_train, y_train)))
 print("Test set score: {:.2f}".format(lr.score(X_test, y_test)))
+
+#printing confusion matrix
+import matplotlib.pyplot as plot
+from sklearn.datasets import make_classification
+from sklearn.metrics import ConfusionMatrixDisplay
+from sklearn.model_selection import train_test_split
+
+ConfusionMatrixDisplay.from_estimator(lr, X_test, y_test)
+plot.show()

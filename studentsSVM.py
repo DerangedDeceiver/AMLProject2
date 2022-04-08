@@ -66,3 +66,12 @@ print("Test set score: {:.2f}".format(clfsvm.score(X_test, y_test)))
 student_prediction = clfsvm.predict(X_test)
 compare = pd.DataFrame({'true': y_test, 'predicted': student_prediction})
 print("true vs predicted\n", compare)
+
+#printing confusion matrix
+import matplotlib.pyplot as plot
+from sklearn.datasets import make_classification
+from sklearn.metrics import ConfusionMatrixDisplay
+from sklearn.model_selection import train_test_split
+
+ConfusionMatrixDisplay.from_estimator(clfsvm, X_test, y_test)
+plot.show()
