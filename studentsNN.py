@@ -50,4 +50,20 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=TESTPART, ra
 from sklearn.neural_network import MLPClassifier
 clf = MLPClassifier(hidden_layer_sizes=(HLSIZE1, HLSIZE2), solver='sgd', alpha=REGULARIZATION, learning_rate='adaptive', learning_rate_init=LEARNRATE, max_iter=MAXITER)
 clf.fit(X_train, y_train)
-clf.predict(X_test, y_test)
+
+# Estimate the accuracy of the classifier on future data, using the test data
+##########################################################################################
+print("Training set score: {:.2f}".format(clf.score(X_train, y_train)))
+print("Test set score: {:.2f}".format(clf.score(X_test, y_test)))
+
+student_prediction = clf.predict(X_test)
+compare = pd.DataFrame({'true': y_test, 'predicted': student_prediction})
+print("true vs predicted\n", compare)
+
+#printing confusion matrix
+import matplotlib.pyplot as plot
+from sklearn.datasets import make_classification
+from sklearn.metrics import ConfusionMatrixDisplay
+
+ConfusionMatrixDisplay.from_estimator(clf, X_test, y_test)
+plot.show()
